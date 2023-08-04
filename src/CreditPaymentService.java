@@ -1,7 +1,7 @@
 public class CreditPaymentService {
-    public int calculate(int weight, double height) {
-        int bmi = (int) (weight / Math.pow(height, 2));
+    public double calculate(int creditАmount, int monthlyPayment, double interestRate, int creditPeriod) {
+        double annuityPayment = creditАmount * interestRate * Math.pow ((1 + interestRate), 12)/ Math.pow ((1 + interestRate), 12) - 1;
 
-        return bmi;
+        return annuityPayment;
     }
 }

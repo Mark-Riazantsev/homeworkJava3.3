@@ -1,6 +1,6 @@
 public class CreditPaymentService {
-    public double calculate(int creditАmount, int monthlyPayment, double interestRate, int creditPeriod) {
-        double annuityPayment = creditАmount * interestRate * Math.pow ((1 + interestRate), 12)/ Math.pow ((1 + interestRate), 12) - 1;
+    public double calculate(int creditАmount, double interestRate, int creditPeriod) {
+        double annuityPayment = (creditАmount * interestRate * Math.pow((1+interestRate), creditPeriod)) / (Math.pow((1+interestRate), creditPeriod) - 1);
 
         return annuityPayment;
     }
